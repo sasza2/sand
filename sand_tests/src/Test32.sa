@@ -1,0 +1,13 @@
+class Test32 {
+
+	main(){
+		try {
+			throw 22;
+		} catch(e){
+			return e;
+		}
+
+		return 0;
+	}
+
+}

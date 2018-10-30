@@ -1,0 +1,12 @@
+class Test12 {
+
+	main(){
+		i = 0;
+		for(i = 0; i < 3; i++){
+			this[i] = i + i;
+		}
+
+		return this[2];
+	}
+
+}

@@ -1,0 +1,10 @@
+CLASS App
+METHOD main
+ARGS 1 args
+PUSH S Console
+PUSH S writeln
+NEXT IN
+PUSH C Hello world!
+CALL 1 ()
+CEND
+RET

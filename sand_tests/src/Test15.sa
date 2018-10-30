@@ -1,0 +1,9 @@
+class Test15 {
+
+	main(){
+		this[5] = 20;
+		this[10] = 30;
+		return this[2+3] + this[5+5];
+	}
+
+}

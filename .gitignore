@@ -1,0 +1,6 @@
+compiler/target/
+commpiler/nb-configuration.xml
+commpiler/nbactions.xml
+virtual_machine/build/
+virtual_machine/app
+virtual_machine/test

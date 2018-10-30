@@ -1,0 +1,7 @@
+class Test25 {
+
+	main(){
+		return 12 + 5 * 10 - 4 ^ 0.5;
+	}
+
+}

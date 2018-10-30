@@ -1,0 +1,17 @@
+class Test35 {
+
+	main(){
+		this.p = 0;
+
+		a = true;
+		b = a || x();
+
+		return this.p;
+	}
+
+	x(){
+		this.p = 1;
+		return true;
+	}
+
+}

@@ -1,0 +1,17 @@
+class Test39 {
+
+	main(){
+		tab = new Array();
+		b(tab);
+		b(tab);
+		b(tab);
+		b(tab);
+		b(tab);
+		return 0;
+	}
+
+	b(tab){
+		return true;
+	}
+
+}

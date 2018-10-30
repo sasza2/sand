@@ -1,0 +1,19 @@
+class Thread {
+
+	id(){
+		return system("thread", "id");
+	}
+
+	start(object){
+		system("thread", "start", object);
+	}
+
+	sleep(time){
+		system("thread", "sleep", time);
+	}
+
+	wait(object){
+		system("thread", "wait", object);
+	}
+
+}

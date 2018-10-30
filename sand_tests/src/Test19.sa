@@ -1,0 +1,13 @@
+import User from "Test18aa"
+
+class Test19 {
+
+	main(){
+		a = new User(6);
+		this.b = new User(8);
+		this.c = new User(1);
+
+		return this.c.sum(new User(this.b.sum(a)));
+	}
+
+}

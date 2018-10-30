@@ -1,0 +1,11 @@
+class Exception {
+
+	print(){
+		Console.writeln(this.message);
+	}
+
+	toString(){
+		return this.message;
+	}
+
+}

@@ -1,0 +1,30 @@
+CLASS Test39
+METHOD main
+ARGS 0 
+PUSH S tab
+NEW 0 Array
+MOV
+CEND
+PUSH S tab
+CALL 1 b
+CEND
+PUSH S tab
+CALL 1 b
+CEND
+PUSH S tab
+CALL 1 b
+CEND
+PUSH S tab
+CALL 1 b
+CEND
+PUSH S tab
+CALL 1 b
+CEND
+PUSH I 0
+CEND
+RET
+METHOD b
+ARGS 1 tab
+PUSH B true
+CEND
+RET

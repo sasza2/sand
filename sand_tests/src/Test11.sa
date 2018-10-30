@@ -1,0 +1,12 @@
+class Test11 {
+
+	main(){
+		a = this.test();
+		return a;
+	}
+
+	test(){
+		return 5;
+	}
+
+}

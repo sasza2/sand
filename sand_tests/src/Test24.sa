@@ -1,0 +1,7 @@
+class Test24 {
+
+	main(){
+		return "aa" + "bb";
+	}
+
+}

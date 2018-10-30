@@ -1,0 +1,20 @@
+class Test40 {
+
+	main(){
+		tab = new Array();
+		tab[0] = 5;
+
+		b(tab[0]);
+		b(tab[0]);
+		b(tab[0]);
+		b(tab[0]);
+		b(tab[0]);
+
+		return 0;
+	}
+
+	b(tab){
+		return true;
+	}
+
+}

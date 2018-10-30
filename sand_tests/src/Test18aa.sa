@@ -1,0 +1,11 @@
+class User {
+
+	constructor(id){
+		this.id = id;
+	}
+
+	sum(user){
+		return this.id + user.id;
+	}
+
+}

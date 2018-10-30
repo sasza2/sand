@@ -1,0 +1,8 @@
+class Test4 {
+
+	main(){
+		this.a = 5;
+		return this.a;
+	}
+
+}

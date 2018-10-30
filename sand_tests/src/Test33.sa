@@ -1,0 +1,14 @@
+class Test33 {
+
+	main(){
+		return div(5, 0);
+	}
+
+	div(a, b){
+		if(b == 0){
+			throw "div by 0";
+		}
+		return a / b;
+	}
+
+}

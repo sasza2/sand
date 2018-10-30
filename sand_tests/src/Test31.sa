@@ -1,0 +1,10 @@
+class Test31 {
+
+	main(){
+		Test31.a = 5;
+		this.a   = 10;
+		a        = 8;
+		return Test31.a * this.a * a;
+	}
+
+}

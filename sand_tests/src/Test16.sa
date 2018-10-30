@@ -1,0 +1,9 @@
+class Test16 {
+
+	main(){
+		a = 30;
+		this[a] = 5;
+		return this[30];
+	}
+
+}

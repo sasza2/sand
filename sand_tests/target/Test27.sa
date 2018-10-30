@@ -1,0 +1,9 @@
+CLASS Test27
+METHOD main
+ARGS 0 
+PUSH C test
+PUSH S length
+NEXT IN
+CALL 0 ()
+CEND
+RET

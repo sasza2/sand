@@ -1,0 +1,21 @@
+CLASS User
+METHOD constructor
+ARGS 1 id
+PUSH S this
+PUSH S id
+NEXT IN
+PUSH S id
+MOV
+CEND
+RET
+METHOD sum
+ARGS 1 user
+PUSH S this
+PUSH S id
+NEXT IN
+PUSH S user
+PUSH S id
+NEXT IN
+ADD
+CEND
+RET

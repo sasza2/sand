@@ -1,0 +1,7 @@
+class Date {
+
+	time(){
+		return system("date", "time");
+	}
+
+}

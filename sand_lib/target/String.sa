@@ -1,0 +1,11 @@
+CLASS String
+METHOD length
+ARGS 0 
+PUSH C string
+PUSH C length
+PUSH S this
+PUSH S value
+NEXT IN
+CALL 3 system
+CEND
+RET

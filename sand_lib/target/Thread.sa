@@ -1,0 +1,32 @@
+CLASS Thread
+METHOD id
+ARGS 0 
+PUSH C thread
+PUSH C id
+CALL 2 system
+CEND
+RET
+METHOD start
+ARGS 1 object
+PUSH C thread
+PUSH C start
+PUSH S object
+CALL 3 system
+CEND
+RET
+METHOD sleep
+ARGS 1 time
+PUSH C thread
+PUSH C sleep
+PUSH S time
+CALL 3 system
+CEND
+RET
+METHOD wait
+ARGS 1 object
+PUSH C thread
+PUSH C wait
+PUSH S object
+CALL 3 system
+CEND
+RET

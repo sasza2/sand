@@ -1,0 +1,16 @@
+CLASS Console
+METHOD writeln
+ARGS 1 str
+PUSH C console
+PUSH C writeln
+PUSH S str
+CALL 3 system
+CEND
+RET
+METHOD readln
+ARGS 0 
+PUSH C console
+PUSH C readln
+CALL 2 system
+CEND
+RET

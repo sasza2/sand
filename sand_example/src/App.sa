@@ -1,0 +1,10 @@
+/*
+    hello world in Sand
+*/
+class App {
+
+    main(args){
+        Console.writeln("Hello world!");
+    }
+
+}

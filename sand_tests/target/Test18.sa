@@ -1,0 +1,14 @@
+IMPORT User Test18aa
+CLASS Test18
+METHOD main
+ARGS 0 
+PUSH S user
+PUSH I 4
+NEW 1 User
+MOV
+CEND
+PUSH S user
+PUSH S id
+NEXT IN
+CEND
+RET

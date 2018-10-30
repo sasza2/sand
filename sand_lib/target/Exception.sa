@@ -1,0 +1,19 @@
+CLASS Exception
+METHOD print
+ARGS 0 
+PUSH S Console
+PUSH S writeln
+NEXT IN
+PUSH S this
+PUSH S message
+NEXT IN
+CALL 1 ()
+CEND
+RET
+METHOD toString
+ARGS 0 
+PUSH S this
+PUSH S message
+NEXT IN
+CEND
+RET

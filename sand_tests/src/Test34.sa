@@ -1,0 +1,19 @@
+class Test34 {
+
+	main(){
+		try {
+			fun1();
+		} catch(e){
+			return e + 5;
+		}
+	}
+
+	fun1(){
+		fun2(55);
+	}
+
+	fun2(a){
+		throw a;
+	}
+
+}

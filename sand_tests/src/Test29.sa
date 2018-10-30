@@ -1,0 +1,7 @@
+class Test29 {
+
+	main(){
+		return 5 * 5 * 5 == 5 ^ 3;
+	}
+
+}

@@ -1,0 +1,17 @@
+CLASS Math
+METHOD rand
+ARGS 2 a,b
+PUSH C math
+PUSH C random
+PUSH S a
+PUSH S b
+CALL 4 system
+CEND
+RET
+METHOD random
+ARGS 2 a,b
+PUSH S a
+PUSH S b
+CALL 2 rand
+CEND
+RET

@@ -1,0 +1,32 @@
+class Test20 {
+
+	main(){
+		a = 1;
+		if(a == 1){
+			a = 2;
+		} else if(a == 2){
+			a = 3;
+		} else {
+			a = 4;
+		}
+
+		if(a == 1){
+			a = 5;
+		} else if(a == 2){
+			a = 6;
+		} else {
+			a = 7;
+		}
+
+		if(a == 8){
+			a = 1;
+		} else if(a == 9){
+			a = 2;
+		} else {
+			a = 100;
+		}
+
+		return a;
+	}
+
+}

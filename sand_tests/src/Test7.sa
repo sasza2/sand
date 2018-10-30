@@ -1,0 +1,11 @@
+class Test7 {
+
+	main(){
+		return a(5);
+	}
+
+	a(i){
+		return i + 1;
+	}
+
+}

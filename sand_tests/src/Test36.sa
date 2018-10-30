@@ -1,0 +1,13 @@
+class Test36 {
+
+	main(){
+		a = true;
+		b = x() && a;
+		return b;
+	}
+
+	x(){
+		return true;
+	}
+
+}

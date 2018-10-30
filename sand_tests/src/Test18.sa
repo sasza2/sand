@@ -1,0 +1,10 @@
+import User from "Test18aa"
+
+class Test18 {
+
+	main(){
+		user = new User(4);
+		return user.id;
+	}
+
+}

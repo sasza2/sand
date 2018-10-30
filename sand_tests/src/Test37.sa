@@ -1,0 +1,8 @@
+class Test37 {
+
+	main(){
+		a = 5 + b;
+		return a;
+	}
+
+}

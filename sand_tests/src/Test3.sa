@@ -1,0 +1,7 @@
+class Test3 {
+
+	main(){
+		return 95 + 5;
+	}
+
+}

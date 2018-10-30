@@ -1,0 +1,7 @@
+class Test28 {
+
+	main(){
+		return 5 + "4" + 1;
+	}
+
+}

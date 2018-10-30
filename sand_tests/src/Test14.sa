@@ -1,0 +1,10 @@
+class Test14 {
+
+	main(){
+		this.a = 5;
+		this.b = 6;
+		x = this.a + this.b;
+		return x;
+	}
+
+}

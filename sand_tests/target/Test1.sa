@@ -1,0 +1,6 @@
+CLASS Test1
+METHOD main
+ARGS 0 
+PUSH I 15
+CEND
+RET

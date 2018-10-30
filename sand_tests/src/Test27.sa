@@ -1,0 +1,7 @@
+class Test27 {
+
+	main(){
+		return "test".length();
+	}
+
+}

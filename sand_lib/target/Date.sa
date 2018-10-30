@@ -1,0 +1,8 @@
+CLASS Date
+METHOD time
+ARGS 0 
+PUSH C date
+PUSH C time
+CALL 2 system
+CEND
+RET

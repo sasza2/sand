@@ -1,0 +1,16 @@
+class Test38 {
+
+	main(){
+		a = 5;
+		test(a);
+		test(a);
+		test(a);
+		test(a);
+		return a;
+	}
+
+	test(b){
+		return b + 1;
+	}
+
+}

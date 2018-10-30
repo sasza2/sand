@@ -1,0 +1,6 @@
+CLASS Array
+METHOD size
+ARGS 0 
+PUSH I 1
+CEND
+RET

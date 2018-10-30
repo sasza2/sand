@@ -1,0 +1,11 @@
+class Math {
+
+	rand(a, b){
+		return system("math", "random", a, b);
+	}
+
+	random(a, b){
+		return rand(a, b);
+	}
+
+}

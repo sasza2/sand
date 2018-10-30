@@ -1,0 +1,16 @@
+class Test21 {
+
+	main(){
+		a = x(55);
+		b = this.x;
+
+		this.x = 90;
+		return a + b + this.x;
+	}
+
+	x(x){
+		this.x = x;
+		return this.x;
+	}
+
+}

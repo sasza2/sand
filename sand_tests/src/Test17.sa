@@ -1,0 +1,21 @@
+class Test17 {
+
+	main(){
+		setA(15);
+		setB(20);
+		return sum();
+	}
+
+	setA(a){
+		this.a = a;
+	}
+
+	setB(b){
+		this.b = b;
+	}
+
+	sum(){
+		return this.a + this.b;
+	}
+
+}

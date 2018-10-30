@@ -1,0 +1,15 @@
+import User from "Test18aa"
+
+class Test23 {
+
+	main(){
+		a = new User("aa");
+		b = new User("bb");
+		c = new User("cc");
+		a.age = 40;
+		b.age = 35;
+		c.age = 25;
+		return a.age + b.age + c.age;
+	}
+
+}

@@ -1,0 +1,11 @@
+class Console {
+
+    writeln(str){
+        system("console", "writeln", str);
+    }
+
+    readln(){
+        return system("console", "readln");
+    }
+
+}

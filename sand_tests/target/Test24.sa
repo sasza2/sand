@@ -1,0 +1,8 @@
+CLASS Test24
+METHOD main
+ARGS 0 
+PUSH C aa
+PUSH C bb
+ADD
+CEND
+RET

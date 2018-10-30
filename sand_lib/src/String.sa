@@ -1,0 +1,7 @@
+class String {
+
+	length(){
+		return system("string", "length", this.value);
+	}
+
+}

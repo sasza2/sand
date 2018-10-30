@@ -1,0 +1,10 @@
+class Test22 {
+
+	main(){
+		this.y = 5;
+		this.x = this.y;
+		this.z = this.x;
+		return this.x + this.y + this.z;
+	}
+
+}

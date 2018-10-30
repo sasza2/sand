@@ -1,0 +1,9 @@
+class Test30 {
+
+	main(){
+		a = true;
+		b = 1 > 0 && a;
+		return a == b;
+	}
+
+}

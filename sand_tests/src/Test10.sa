@@ -3,6 +3,7 @@ class Test10 {
 	main(){
 		x = 0;
 		for(i = 0; i < 10; i++){
+            Console.writeln(i);
 			x = x + aa(i);
 		}
 		return x;

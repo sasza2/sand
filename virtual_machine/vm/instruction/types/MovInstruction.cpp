@@ -40,6 +40,7 @@ void MovInstruction::execute(){
     }
 
     where->usage++;
+    PUSH(stack, where);
 
     if(tmp != old && old != NULL){
         FREE(&old);

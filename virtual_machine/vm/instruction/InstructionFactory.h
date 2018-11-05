@@ -29,13 +29,14 @@
 #include "./types/conditions/Conditions.h"
 #include "./types/for/For.h"
 #include "./types/IncInstruction.h"
+#include "./types/while/While.h"
 
 class InstructionFactory {
 
     private:
         static std::map <std::string, Instruction*> * instructions;
 
-    public:        
+    public:
         static Instruction * produce(std::vector <std::string> mnemonics);
         static void free();
 

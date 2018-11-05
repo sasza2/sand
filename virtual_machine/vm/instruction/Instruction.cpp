@@ -14,6 +14,10 @@ bool Instruction::isMoveable(){
     return false;
 }
 
+bool Instruction::isComparision(){
+    return false;
+}
+
 int Instruction::getLevel(){
     return level;
 }
@@ -31,5 +35,5 @@ void Instruction::setPositionInMethod(int position){
 }
 
 Instruction::~Instruction(){
-    
+
 }

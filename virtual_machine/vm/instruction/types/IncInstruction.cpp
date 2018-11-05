@@ -20,12 +20,25 @@ void IncInstruction::execute(){
             var = tmp;
         }
     }
-    var->inc();
+
+    PUSH(stack, var);
+
+    if(beforeUse || var->change){
+        if(var->type() == INT){
+            ((IntegerVariable*)var)->_value++;
+        } else if(var->type() == DOUBLE){
+            ((DoubleVariable*)var)->_value++;
+        }
+    } else {
+        var->change = 1;
+    }
+
+    var->usage++;
     current->position++;
 }
 
 std::string IncInstruction::toString(){
-    return "INC";
+    return beforeUse ? "INC 1" : "INC 0";
 }
 
 bool IncInstruction::getBeforeUse(){

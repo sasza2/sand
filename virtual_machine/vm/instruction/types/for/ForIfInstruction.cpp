@@ -6,7 +6,7 @@ Instruction * ForIfInstruction::fromList(std::vector <std::string> mnemonics){
     return instruction;
 }
 
-void ForIfInstruction::execute(){    
+void ForIfInstruction::execute(){
     Trace * current = VM_MY_TRACE();
     Stack * stack   = current->stack;
     Variable * boolean = POP(stack);
@@ -14,8 +14,8 @@ void ForIfInstruction::execute(){
         current->position = positionOnTrue;
     } else {
         current->position = positionOnFalse;
-    }    
-    FREE(&boolean);    
+    }
+    FREE(&boolean);
 }
 
 std::string ForIfInstruction::toString(){
@@ -27,13 +27,13 @@ void ForIfInstruction::refresh(Method * method){
     positionOnTrue = finder.addMethod(method)
                            .addPosition(positionInMethod)
                            .addLevel(getLevel())
-                           .addType("FORBODY")                                                 
+                           .addType("FORBODY")
                            .find() + 1;
-    
+
     positionOnFalse = finder.clear()
                             .addMethod(method)
                             .addPosition(positionInMethod)
                             .addLevel(getLevel())
-                            .addType("FOREND")                                                 
+                            .addType("FOREND")
                             .find() + 1;
 }

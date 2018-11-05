@@ -35,7 +35,7 @@ Variable * IntegerVariable::sum(Variable * variable){
         }
         return sum(tmp);
     }
-    
+
     return FactoryVariable::produceUndefined();
 }
 
@@ -48,7 +48,10 @@ Variable * IntegerVariable::_or(){
 }
 
 Variable * IntegerVariable::inc(){
-    _value++;
+    if(change > 0){
+        _value++;
+    }
+    change = 0;
     return this;
 }
 

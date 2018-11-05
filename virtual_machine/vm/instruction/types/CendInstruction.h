@@ -6,11 +6,15 @@
 #include "./../Instruction.h"
 
 class CendInstruction : public Instruction {
-    
-    public:        
+
+    private:
+        bool shouldNotPop;
+
+    public:
         Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string toString();
+        void refresh(Method * method);
 };
 
 #endif

@@ -6,57 +6,63 @@
 #include "./../../Instruction.h"
 
 class EqInstruction : public Instruction {
-    
-    public:        
+
+    public:
         Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string toString();
-        
+        virtual bool isComparision();
+
 };
 
 class GtInstruction : public Instruction {
-    
-    public:        
+
+    public:
         Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string toString();
-        
+        virtual bool isComparision();
+
 };
 
 class GteInstruction : public Instruction {
-    
-    public:        
+
+    public:
         Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string toString();
-        
+        virtual bool isComparision();
+
 };
 
 class LtInstruction : public Instruction {
-    
-    public:        
+
+    public:
         Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string toString();
-        
+        virtual bool isComparision();
+
 };
 
 class LteInstruction : public Instruction {
-    
-    public:        
+
+    public:
         Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string toString();
-        
+        virtual bool isComparision();
+
 };
 
 class NeqInstruction : public Instruction {
-    
-    public:        
+
+    public:
         Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string toString();
-        
+        virtual bool isComparision();
+
 };
 
 #endif

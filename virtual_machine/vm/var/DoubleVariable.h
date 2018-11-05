@@ -7,21 +7,23 @@
 #include "./Variable.h"
 
 class DoubleVariable : public Variable {
-        
+
     public:
         double _value;
-        
+
         DoubleVariable(double value);
         int type();
-        
+
         virtual Variable * copy();
-        
+
         double getValue();
         Variable * sum(Variable * variable);
         std::string toString();
-        
+
         Variable * _and();
         Variable * _or();
+
+        Variable * inc();
         
 };
 

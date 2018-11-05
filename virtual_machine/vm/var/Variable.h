@@ -23,7 +23,7 @@ class Number {
     public:
         bool _null;
         double _value;
-            
+
         bool isNull();
         double value();
 
@@ -50,6 +50,7 @@ class Variable {
     public:
         int usage = 1;
         bool readOnly = false;
+        int change = 0; //inc or dec
 
         virtual int type() = 0;
         virtual Variable * copy();

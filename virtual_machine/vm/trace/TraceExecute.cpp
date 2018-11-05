@@ -40,6 +40,9 @@ std::string TraceExecute::all(TraceList * traceList){
                     Variable * tmp = ((NameVariable*)retVar)->produceFromLocal();
                     retVar = tmp == NULL ? retVar : tmp;
                 }
+                if(retVar->change){
+                    retVar->inc();
+                }
                 ret = retVar->toString();
                 delete last;
                 last = NULL;

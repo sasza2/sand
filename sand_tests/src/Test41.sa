@@ -1,0 +1,12 @@
+class Test41 {
+
+	main(args){
+		c = 0;
+		i = 0;
+		while(i++ < 10){
+			c++;
+		}
+		return c;
+	}
+
+}

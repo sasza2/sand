@@ -8,21 +8,75 @@
 #include "vm/VM.h"
 #include <time.h>
 
+class Assert {
+    public:
+        std::string clsName;
+        std::string expected;
+};
+
 std::string libraryPath;
 std::string testingPath;
 
-void test(std::string clsName, std::string expected){
+int test(Assert & as){
     VM::init();
     vm = VM::getInstance();
     vm->loadLibrary(libraryPath);
     vm->loadProject(testingPath);
-    std::string ret = vm->runThreadMain(clsName, "main");
+    std::string ret = vm->runThreadMain(as.clsName, "main");
 
     //delete vm;
 
-    if(expected != ret){
-        std::cout<<"test for " + clsName + " failed: "<<ret<<std::endl;
+    if(as.expected != ret){
+        std::cout<<"test for " + as.clsName + " failed: "<<ret<<std::endl;
+        return 1;
     }
+
+    return 0;
+}
+
+std::vector <Assert> tests_read(std::string testsFilePath){
+    std::vector <Assert> tests;
+
+    FILE * handle = fopen(testsFilePath.c_str(), "r");
+    if(handle == NULL){
+        std::cout<<"file "<<testsFilePath<<" does not exist"<<std::endl;
+        return tests;
+    }
+
+    bool toAdd = false;
+
+    std::string clsName  = "";
+    std::string expected = "";
+
+    char c;
+    do {
+        c = fgetc (handle);
+        if(c == ':'){
+            toAdd = !toAdd;
+            continue;
+        }
+
+        if(c == '\n'){
+            Assert as;
+            as.clsName  = clsName;
+            as.expected = expected;
+            tests.push_back(as);
+            clsName  = "";
+            expected = "";
+            toAdd = !toAdd;
+            continue;
+        }
+
+        if(toAdd){
+            expected = expected + c;
+        } else {
+            clsName  = clsName  + c;
+        }
+    } while(c != EOF);
+
+    fclose(handle);
+
+    return tests;
 }
 
 int main(int argc, char ** argv){
@@ -39,42 +93,12 @@ int main(int argc, char ** argv){
     libraryPath = std::string(std::string(argv[1]) + std::string("target/"));
     testingPath = std::string(std::string(argv[2]) + std::string("target/"));
 
-    FILE * tests = fopen(argv[3], "r");
-    if(tests == NULL){
-        std::cout<<"file "<<argv[3]<<" does not exist"<<std::endl;
-        return 2;
+    std::vector <Assert> tests = tests_read(argv[3]);
+    for(unsigned int i = 0; i < tests.size(); i++){
+        if(test(tests[i])){
+            return 1;
+        }
     }
-
-    bool toAdd = false;
-
-    std::string clsName  = "";
-    std::string expected = "";
-
-    char c;
-    do {
-        c = fgetc (tests);
-        if(c == ':'){
-            toAdd = !toAdd;
-            continue;
-        }
-
-        if(c == '\n'){
-            std::cout<<clsName<<" "<<clsName.size()<<" "<<expected<<" "<<expected.size()<<std::endl;
-            test(clsName, expected);
-            clsName  = "";
-            expected = "";
-            toAdd = !toAdd;
-            continue;
-        }
-
-        if(toAdd){
-            expected = expected + c;
-        } else {
-            clsName  = clsName  + c;
-        }
-    } while(c != EOF);
-
-    fclose(tests);
 
     return 0;
 }

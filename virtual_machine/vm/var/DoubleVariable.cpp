@@ -30,7 +30,7 @@ Variable * DoubleVariable::sum(Variable * variable){
         Number * number = variable->toNumber();
         return FactoryVariable::produceDouble(_value + number->value());
     }
-    
+
     return FactoryVariable::produceUndefined();
 }
 
@@ -40,6 +40,14 @@ Variable * DoubleVariable::_and(){
 
 Variable * DoubleVariable::_or(){
     return (long)_value == 0 ? FactoryVariable::produceFalse() : FactoryVariable::produceTrue();
+}
+
+Variable * DoubleVariable::inc(){
+    if(change > 0){
+        _value++;
+    }
+    change = 0;
+    return this;
 }
 
 std::string DoubleVariable::toString(){

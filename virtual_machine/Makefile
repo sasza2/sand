@@ -16,6 +16,7 @@ all:
 	g++ -c vm/instruction/types/conditions/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/for/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/push/*.cpp $(VERSION)
+	g++ -c vm/instruction/types/while/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/*.cpp $(VERSION)
 	g++ -c vm/instruction/*.cpp $(VERSION)
 	g++ -c vm/method/*.cpp $(VERSION)
@@ -33,7 +34,7 @@ all:
 	rm -rf build/dev/App.o
 	if [ ${DEBUG} -gt 0 ] ; then \
 		g++ -o test build/dev/*.o $(VERSION); \
-	fi 
+	fi
 	if [ ${DEBUG} -lt 1 ] ; then \
 		g++ -o app build/prod/*.o $(VERSION); \
 	fi

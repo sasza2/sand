@@ -8,11 +8,11 @@ class Trace;
 class Method;
 
 class Instruction {
-    
+
     private:
-        std::string _type;    
-        int level = -1;                
-        
+        std::string _type;
+        int level = -1;
+
     protected:
         Method * method;
         int positionInMethod;
@@ -22,15 +22,16 @@ class Instruction {
         virtual void execute() = 0;
         virtual std::string toString() = 0;
         std::string type();
-        void setType(std::string type);   
+        void setType(std::string type);
         virtual bool isMoveable();
-        
+        virtual bool isComparision();
+
         int getLevel();
         void setLevel(int level);
-    
-        void setPositionInMethod(int position);        
+
+        void setPositionInMethod(int position);
         virtual void refresh(Method * method);
-        
+
         virtual ~Instruction();
 };
 

@@ -2,7 +2,7 @@
 
 std::map <std::string, Instruction*> * InstructionFactory::instructions = NULL;
 
-Instruction * InstructionFactory::produce(std::vector <std::string> mnemonics){    
+Instruction * InstructionFactory::produce(std::vector <std::string> mnemonics){
     if(instructions == NULL){
         instructions = new std::map<std::string, Instruction*>;
         instructions->insert(std::pair<std::string,Instruction*>(std::string("CLASS"),    new ClassInstruction()));
@@ -43,19 +43,22 @@ Instruction * InstructionFactory::produce(std::vector <std::string> mnemonics){
         instructions->insert(std::pair<std::string,Instruction*>(std::string("DIV"),      new DivInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("TRY"),      new TryInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("CATCH"),    new CatchInstruction()));
-        instructions->insert(std::pair<std::string,Instruction*>(std::string("CATCHEND"), new CatchEndInstruction()));        
+        instructions->insert(std::pair<std::string,Instruction*>(std::string("CATCHEND"), new CatchEndInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("THROW"),    new ThrowInstruction()));
+        instructions->insert(std::pair<std::string,Instruction*>(std::string("WHILE"),    new WhileInstruction()));
+        instructions->insert(std::pair<std::string,Instruction*>(std::string("WHILEIF"),  new WhileIfInstruction()));
+        instructions->insert(std::pair<std::string,Instruction*>(std::string("WHILEEND"), new WhileEndInstruction()));
     }
-    
+
     Instruction * instruction = instructions->find(mnemonics[0])->second;
     if(instruction == NULL){
         std::cout<<"no such instruction "<<mnemonics[0]<<std::endl;
         return NULL;
     }
-            
+
     instruction = instruction->fromList(mnemonics);
     instruction->setType(mnemonics[0]);
-    
+
     return instruction;
 }
 

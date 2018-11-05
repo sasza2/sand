@@ -16,8 +16,10 @@ Instruction * PushInstruction::fromList(std::vector <std::string> mnemonics){
             return new PushIntegerInstruction(atol(arg.c_str()));
         case 'C': //string
             return new PushStringInstruction(arg);
-        case 'B':
+        case 'B': //boolean
             return new PushBooleanInstruction(arg == std::string("true"));
+        case 'U': //undefined
+            return new PushUndefinedInstruction();
         case 'S':
         default:
             return new PushNameInstruction(arg);

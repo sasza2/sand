@@ -1,0 +1,8 @@
+class Test {
+
+	main(args){
+		a = undefined;
+		return a;
+	}
+
+}

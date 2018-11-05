@@ -1,9 +1,5 @@
 package compiler.condition.element.arthmetic;
 
-import compiler.condition.element.Element;
-import compiler.condition.element.Priority;
-import compiler.instruction.Instruction;
-
 /**
  *
  * @author sasza

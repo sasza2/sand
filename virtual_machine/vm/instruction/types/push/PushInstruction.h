@@ -6,13 +6,13 @@
 #include "./../../Instruction.h"
 
 class PushInstruction : public Instruction {
-        
-    public:                
-        Instruction * fromList(std::vector <std::string> mnemonics);        
+
+    public:
+        Instruction * fromList(std::vector <std::string> mnemonics);
         void execute();
         std::string type();
         std::string toString();
-        
+
         virtual ~PushInstruction();
 };
 
@@ -21,6 +21,7 @@ class PushInstruction : public Instruction {
 #include "./PushIntegerInstruction.h"
 #include "./PushStringInstruction.h"
 #include "./PushNameInstruction.h"
+#include "./PushUndefinedInstruction.h"
 #include "./../../../var/factory/FactoryVariable.h"
 
 #endif

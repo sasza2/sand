@@ -38,14 +38,15 @@ public class BodyReader implements StandardReader {
             scriptSelector.add(new StringPattern("}"), new BodyCloseReader());
         }
         
-        scriptSelector.add(new StringPattern("/*"), new CommentReader())
-                .add(new StringPattern("return "), new ReturnReader())
-                .add(new StringPattern("if"), new IfReader())
-                .add(new StringPattern("for"), new ForReader())
-                .add(new StringPattern("while"), new WhileReader())
-                .add(new StringPattern("try"), new TryReader())
-                .add(new StringPattern("throw"), new ThrowReader())
-                .add(new ConditionPattern(), new ConditionStatementReader());
+        scriptSelector.add(new StringPattern("/*"),      new CommentReader())
+                      .add(new StringPattern("return "), new ReturnReader())
+                      .add(new StringPattern("if"),      new IfReader())
+                      .add(new StringPattern("for"),     new ForReader())
+                      .add(new StringPattern("while"),   new WhileReader())
+                      .add(new StringPattern("try"),     new TryReader())
+                      .add(new StringPattern("throw"),   new ThrowReader())
+                      .add(new StringPattern("break"),   new BreakReader())
+                      .add(new ConditionPattern(), new ConditionStatementReader());
         
         if(withEnding){
             scriptSelector.orElse(new EndReader());                        

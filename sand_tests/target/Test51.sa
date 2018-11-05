@@ -1,0 +1,20 @@
+CLASS Test51
+METHOD main
+ARGS 1 args
+PUSH S this
+PUSH S x
+NEXT IN
+PUSH I 5
+MOV
+CEND
+PUSH S this
+PUSH S x
+NEXT IN
+PUSH U undefined
+MOV
+CEND
+PUSH S this
+PUSH S x
+NEXT IN
+CEND
+RET

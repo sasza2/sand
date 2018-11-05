@@ -31,6 +31,7 @@
 #include "./types/IncInstruction.h"
 #include "./types/DecInstruction.h"
 #include "./types/while/While.h"
+#include "./types/BreakInstruction.h"
 
 class InstructionFactory {
 

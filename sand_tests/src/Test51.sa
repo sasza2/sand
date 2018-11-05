@@ -1,0 +1,9 @@
+class Test51 {
+
+	main(args){
+		this.x = 5;
+		delete this.x;
+		return this.x;
+	}
+
+}

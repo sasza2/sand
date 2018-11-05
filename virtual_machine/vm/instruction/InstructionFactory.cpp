@@ -51,6 +51,7 @@ Instruction * InstructionFactory::produce(std::vector <std::string> mnemonics){
         instructions->insert(std::pair<std::string,Instruction*>(std::string("WHILEIF"),  new WhileIfInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("WHILEEND"), new WhileEndInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("BREAK"),    new BreakInstruction()));
+        instructions->insert(std::pair<std::string,Instruction*>(std::string("CONTINUE"), new ContinueInstruction()));
     }
 
     Instruction * instruction = instructions->find(mnemonics[0])->second;

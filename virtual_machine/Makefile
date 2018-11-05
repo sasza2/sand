@@ -32,11 +32,7 @@ all:
 	rm *.o
 	rm -rf build/prod/Test.o
 	rm -rf build/dev/App.o
-	if [ ${DEBUG} -gt 0 ] ; then \
-		g++ -o test build/dev/*.o $(VERSION); \
-	fi
-	if [ ${DEBUG} -lt 1 ] ; then \
-		g++ -o app build/prod/*.o $(VERSION); \
-	fi
+	g++ -o test build/dev/*.o $(VERSION);
+	g++ -o app build/prod/*.o $(VERSION);
 	rm -rf build/prod/*
 	rm -rf build/dev/*

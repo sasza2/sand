@@ -17,6 +17,7 @@ import compiler.exception.CompilerException;
 import compiler.helpers.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -94,7 +95,7 @@ public class ConditionRead {
     }
     
     private Map <String, Supplier<Element>> createSuppliers(){
-        Map <String, Supplier<Element>> elements = new HashMap();
+        Map <String, Supplier<Element>> elements = new LinkedHashMap();
         elements.put("false",     () -> new BooleanElement(false));
         elements.put("true",      () -> new BooleanElement(true));
         elements.put("new ",      () -> new NewElement());

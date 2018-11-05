@@ -22,6 +22,7 @@ Instruction * InstructionFactory::produce(std::vector <std::string> mnemonics){
         instructions->insert(std::pair<std::string,Instruction*>(std::string("IF"),       new IfInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("JMP"),      new JmpInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("EQ"),       new EqInstruction()));
+        instructions->insert(std::pair<std::string,Instruction*>(std::string("NEQ"),      new NeqInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("GT"),       new GtInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("GTE"),      new GteInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("LT"),       new LtInstruction()));

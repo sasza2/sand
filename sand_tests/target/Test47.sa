@@ -1,0 +1,8 @@
+CLASS Test47
+METHOD main
+ARGS 1 args
+PUSH U undefined
+PUSH U undefined
+EQ
+CEND
+RET

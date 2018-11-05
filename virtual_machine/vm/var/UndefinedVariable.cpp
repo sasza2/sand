@@ -17,11 +17,11 @@ Variable * UndefinedVariable::_or(){
 }
 
 Variable * UndefinedVariable::eq(Variable * variable){
-    return this;
+    return variable->type() == UNDEFINED ? FactoryVariable::produceTrue() : FactoryVariable::produceFalse();
 }
 
 Variable * UndefinedVariable::neq(Variable * variable){
-    return this;
+    return variable->type() == UNDEFINED ? FactoryVariable::produceFalse() : FactoryVariable::produceTrue();
 }
 
 std::string UndefinedVariable::toString(){

@@ -12,11 +12,10 @@ import compiler.condition.element.assignment.EqualAssignmentElement;
 import compiler.condition.element.equals.*;
 import compiler.condition.element.function.NewElement;
 import compiler.condition.element.number.BooleanElement;
-import compiler.condition.element.other.UndefinedElement;
+import compiler.condition.element.other.*;
 import compiler.exception.CompilerException;
 import compiler.helpers.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -124,6 +123,8 @@ public class ConditionRead {
         elements.put(".",         () -> new DotElement());
         elements.put("=",         () -> new EqualAssignmentElement());
         elements.put("undefined", () -> new UndefinedElement());
+        elements.put("delete",    () -> new DeleteElement());
+        elements.put("~",         () -> new DeleteElement());
         return elements;
     }
     

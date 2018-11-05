@@ -1,0 +1,14 @@
+CLASS Test49
+METHOD main
+ARGS 1 args
+PUSH S a
+PUSH C test
+MOV
+CEND
+PUSH S a
+PUSH U undefined
+MOV
+CEND
+PUSH S a
+CEND
+RET

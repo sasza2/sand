@@ -1,0 +1,9 @@
+class Test50 {
+
+	main(args){
+		a = "test";
+		delete a;
+		return a;
+	}
+
+}

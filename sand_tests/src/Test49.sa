@@ -1,0 +1,9 @@
+class Test49 {
+
+	main(args){
+		a = "test";
+		~a;
+		return a;
+	}
+
+}

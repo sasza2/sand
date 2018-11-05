@@ -9,6 +9,7 @@ public enum Priority {
     OTHER(0),   
     BRACKET(0),    
     ASSIGNMENT(1),
+    DELETE(1),
     OR(2),
     AND(3),
     EQUAL(4),

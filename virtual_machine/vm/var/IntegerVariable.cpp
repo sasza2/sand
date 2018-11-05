@@ -50,9 +50,15 @@ Variable * IntegerVariable::_or(){
 Variable * IntegerVariable::inc(){
     if(change > 0){
         _value++;
+    } else if(change < 0){
+        _value--;
     }
     change = 0;
     return this;
+}
+
+Variable * IntegerVariable::dec(){
+    return this->inc();
 }
 
 std::string IntegerVariable::toString(){

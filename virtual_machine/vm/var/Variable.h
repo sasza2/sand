@@ -65,6 +65,7 @@ class Variable {
         virtual Variable * _and() = 0;
         virtual Variable * _or() = 0;
         virtual Variable * inc();
+        virtual Variable * dec();
 
         virtual Variable * eq(Variable * variable);
         virtual Variable * neq(Variable * variable);

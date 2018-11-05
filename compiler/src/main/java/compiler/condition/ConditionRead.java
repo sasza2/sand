@@ -98,6 +98,7 @@ public class ConditionRead {
         elements.put("true",  () -> new BooleanElement(true));
         elements.put("new ",  () -> new NewElement());
         elements.put("++",    () -> new IncElement());
+        elements.put("--",    () -> new DecElement());
         elements.put("||",    () -> new OrElement());
         elements.put("&&",    () -> new AndElement());
         elements.put("==",    () -> new EqualElement());

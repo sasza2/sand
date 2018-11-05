@@ -45,9 +45,15 @@ Variable * DoubleVariable::_or(){
 Variable * DoubleVariable::inc(){
     if(change > 0){
         _value++;
+    } else if(change < 0){
+        _value--;
     }
     change = 0;
     return this;
+}
+
+Variable * DoubleVariable::dec(){
+    return this->inc();
 }
 
 std::string DoubleVariable::toString(){

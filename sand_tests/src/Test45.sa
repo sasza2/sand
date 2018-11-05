@@ -1,0 +1,16 @@
+class Test45 {
+
+	main(args){
+		c = 0;
+		i = 10;
+		while(i-- > 0){
+			c++;
+		}
+		i = 10;
+		while(--i > 0){
+			c++;
+		}
+		return c;
+	}
+
+}

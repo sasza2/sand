@@ -7,24 +7,25 @@
 #include "./Variable.h"
 
 class IntegerVariable : public Variable {
-        
+
     public:
         long _value;
-        
+
         IntegerVariable(long value);
         int type();
-        
+
         Variable * copy();
-        
+
         Variable * sum(Variable * variable);
         long getValue();
         std::string toString();
-        
+
         Variable * _and();
         Variable * _or();
-        
+
         Variable * inc();
-        
+        Variable * dec();
+
 };
 
 #include "./StringVariable.h"

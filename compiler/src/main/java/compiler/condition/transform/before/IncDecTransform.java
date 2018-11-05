@@ -1,7 +1,7 @@
 package compiler.condition.transform.before;
 
 import compiler.condition.element.Element;
-import compiler.condition.element.arthmetic.IncElement;
+import compiler.condition.element.arthmetic.IncDecElement;
 import compiler.condition.element.string.TemporaryStringElement;
 import compiler.condition.transform.Transform;
 import java.util.List;
@@ -17,8 +17,8 @@ public class IncDecTransform implements Transform {
         for(int i = 0; i < elements.size() - 1; i++){
             Element current = elements.get(i);
             Element next    = elements.get(i + 1);
-            if(current instanceof IncElement && next instanceof TemporaryStringElement){
-                ((IncElement)current).setPrefix(true);
+            if(current instanceof IncDecElement && next instanceof TemporaryStringElement){
+                ((IncDecElement)current).setPrefix(true);
             }
         }
         return elements;

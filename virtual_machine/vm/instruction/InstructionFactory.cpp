@@ -37,6 +37,7 @@ Instruction * InstructionFactory::produce(std::vector <std::string> mnemonics){
         instructions->insert(std::pair<std::string,Instruction*>(std::string("FORLOOP"),  new ForLoopInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("FOREND"),   new ForEndInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("INC"),      new IncInstruction()));
+        instructions->insert(std::pair<std::string,Instruction*>(std::string("DEC"),      new DecInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("MUL"),      new MulInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("SUB"),      new SubInstruction()));
         instructions->insert(std::pair<std::string,Instruction*>(std::string("POW"),      new PowInstruction()));

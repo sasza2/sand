@@ -29,6 +29,7 @@
 #include "./types/conditions/Conditions.h"
 #include "./types/for/For.h"
 #include "./types/IncInstruction.h"
+#include "./types/DecInstruction.h"
 #include "./types/while/While.h"
 
 class InstructionFactory {

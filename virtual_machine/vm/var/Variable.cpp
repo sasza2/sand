@@ -48,6 +48,10 @@ Variable * Variable::inc(){
     return FactoryVariable::produceUndefined();
 }
 
+Variable * Variable::dec(){
+    return FactoryVariable::produceUndefined();
+}
+
 Variable * Variable::copy(){
     usage++;
     return this;

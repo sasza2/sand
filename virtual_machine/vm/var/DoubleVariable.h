@@ -24,7 +24,7 @@ class DoubleVariable : public Variable {
         Variable * _or();
 
         Variable * inc();
-        
+        Variable * dec();
 };
 
 #include "./IntegerVariable.h"

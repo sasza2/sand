@@ -23,6 +23,7 @@
 #include "./types/arthmetic/SubInstruction.h"
 #include "./types/arthmetic/PowInstruction.h"
 #include "./types/arthmetic/DivInstruction.h"
+#include "./types/arthmetic/NotInstruction.h"
 #include "./types/AndInstruction.h"
 #include "./types/OrInstruction.h"
 #include "./types/comparision/Comparision.h"
@@ -33,6 +34,7 @@
 #include "./types/while/While.h"
 #include "./types/BreakInstruction.h"
 #include "./types/ContinueInstruction.h"
+#include "./types/do/DoWhileInstruction.h"
 
 class InstructionFactory {
 

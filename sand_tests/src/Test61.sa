@@ -1,0 +1,10 @@
+class Test61 {
+
+	main(args){
+		do {
+			break;
+		} while(true);
+		return 0;
+	}
+
+}

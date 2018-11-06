@@ -14,6 +14,7 @@ all:
 	g++ -c vm/instruction/types/catch/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/comparision/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/conditions/*.cpp $(VERSION)
+	g++ -c vm/instruction/types/do/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/for/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/push/*.cpp $(VERSION)
 	g++ -c vm/instruction/types/while/*.cpp $(VERSION)

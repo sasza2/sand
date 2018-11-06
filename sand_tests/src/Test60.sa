@@ -1,0 +1,12 @@
+class Test60 {
+
+	main(args){
+		c = 0;
+		i = 0;
+		do {
+			c++;
+		} while(++i < 10);
+		return c;
+	}
+
+}

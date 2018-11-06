@@ -47,6 +47,7 @@ public class BodyReader implements StandardReader {
                       .add(new StringPattern("throw"),    new ThrowReader())
                       .add(new StringPattern("break"),    new BreakReader())
                       .add(new StringPattern("continue"), new ContinueReader())
+                      .add(new StringPattern("do"),       new DoWhileReader())
                       .add(new ConditionPattern(), new ConditionStatementReader());
         
         if(withEnding){
